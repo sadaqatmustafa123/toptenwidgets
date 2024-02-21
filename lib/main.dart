@@ -21,14 +21,27 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        body: const Scaffold(
-          body: Center(
-              child: Text(
-            'Hello World',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          )),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyan,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 1, 51, 57),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyan,
+              ),
+            ],
+          ),
         ),
       ),
     );
