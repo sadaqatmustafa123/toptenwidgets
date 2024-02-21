@@ -14,10 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'Top Ten Widgets',
-            style: TextStyle(
-              color: Colors.white,
+          title: Center(
+            child: const Text(
+              'Top Ten Widgets',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ),
@@ -25,21 +28,24 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.cyan,
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 1, 51, 57),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.cyan,
-              ),
+              SizedBox(
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.amber,
+                    ),
+                    Text('Stack'),
+                    // Positioned(
+                    //   child: Text('Stack'),
+                    //   top: 0,
+                    //   left: 30,
+                    // )
+                  ],
+                ),
+              )
             ],
           ),
         ),
