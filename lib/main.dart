@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const Scaffold(
-          body: Text('Hello World'),
+          body: Center(child: Text('Hello World')),
         ),
       ),
     );
